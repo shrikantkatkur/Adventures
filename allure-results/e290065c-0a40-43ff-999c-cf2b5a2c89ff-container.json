@@ -1,0 +1,1 @@
+{"uuid":"e290065c-0a40-43ff-999c-cf2b5a2c89ff","name":"com.adventures.base.Base.setUp","children":["8c4fba83-e89e-4880-901f-45b818a06e92"],"description":"","befores":[{"name":"setUp","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1721648022657,"stop":1721648033926}],"afters":[],"start":1721648022653,"stop":1721648033930}
