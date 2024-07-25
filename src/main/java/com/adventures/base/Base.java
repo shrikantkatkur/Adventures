@@ -1,19 +1,11 @@
 package com.adventures.base;
 
-import java.time.Duration;
-
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
 import com.adventure.exception.InvalidBrowserNameException;
 import com.adventures.utilities.Config;
 
@@ -49,11 +41,11 @@ public class Base {
 
 	}
 
-	@AfterMethod
-	public void tearDown() {
-		log.info("Closing Browser");
-		driver.close();
-		driver.quit();
-	}
+//	@AfterMethod
+//	public void tearDown() {
+//		log.info("Closing Browser");
+//		driver.close();
+//		driver.quit();
+//	}
 
 }

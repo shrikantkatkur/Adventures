@@ -1,12 +1,8 @@
 package com.adventures.pages;
 
-import javax.xml.xpath.XPath;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import com.adventures.base.Base;
-import com.adventures.keyword.Keyword;
 
 public class ProductDetailsPage extends Base {
 
