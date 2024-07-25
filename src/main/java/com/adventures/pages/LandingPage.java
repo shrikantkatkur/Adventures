@@ -7,9 +7,8 @@ import org.openqa.selenium.support.PageFactory;
 import com.adventures.base.Base;
 
 public class LandingPage {
-	public LandingPage() {
-		PageFactory.initElements(Base.getDriver(), this);
-	}
+	Base b = new Base();
+
 	
 	@FindBy(xpath = "//div[@class=\"logo\"]")
 	WebElement logo;
