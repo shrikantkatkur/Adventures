@@ -1,2 +1,4 @@
-2024-Jul-22 17:04:58,101 [main] com.adventures.base.Base 
+2024-Jul-25 14:39:06,630 [main] com.adventures.base.Base 
   INFO  opening Chrome Browser
+2024-Jul-25 14:39:12,467 [main] com.adventures.base.Base 
+  INFO  Closing Browser
