@@ -19,7 +19,6 @@ public class ProductDetailPageTC extends Base {
         Page.clickUserBtn();
 		Page.enterUserName(id);
 		Page.enterPass(pass);
-		Thread.sleep(5000);
 		Page.clickSiginIn();
 
 	}
