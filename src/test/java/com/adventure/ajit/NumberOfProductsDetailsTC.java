@@ -21,7 +21,6 @@ public class NumberOfProductsDetailsTC extends Base {
 	public void verifyNumberOfProducts() throws InterruptedException {
 		ProductDetailsPage pdPage = new ProductDetailsPage();
 		PageFactory.initElements(driver, pdPage);
-
 		pdPage.clickUserBtn();
 		pdPage.enterUserName(conf.getuserName());
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
