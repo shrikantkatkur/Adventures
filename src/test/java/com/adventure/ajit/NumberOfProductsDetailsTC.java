@@ -2,8 +2,6 @@ package com.adventure.ajit;
 
 import java.time.Duration;
 import java.util.List;
-
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
