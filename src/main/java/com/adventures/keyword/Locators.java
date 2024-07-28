@@ -8,7 +8,5 @@ public interface Locators {
 	String CITY = "Pune";
 	String STATE = "Maharashtra";
 	String COUNTRY = "India";
-	String PINCODE = "411014";
-	
-	
+	String PINCODE = "411014";	
 }
