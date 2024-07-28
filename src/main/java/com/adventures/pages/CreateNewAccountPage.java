@@ -1,19 +1,24 @@
 package com.adventures.pages;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 
 import com.adventures.base.Base;
 
 public class CreateNewAccountPage extends Base {
-	
+
+	FluentWait<WebDriver> wait = new FluentWait<WebDriver>(driver);
+
 	@FindBy(xpath = "//a[@id=\"menuUserLink\"]")
 	WebElement userIconBtn;
-	
+
 	@FindBy(xpath = "//a[text()='CREATE NEW ACCOUNT']")
 	WebElement createNewAccountLink;
-	
+
 	@FindBy(xpath = "//input[@name=\"usernameRegisterPage\"]")
 	WebElement userName;
 
@@ -55,73 +60,73 @@ public class CreateNewAccountPage extends Base {
 
 	@FindBy(xpath = "//button[@id=\"register_btn\"]")
 	WebElement regBtn;
-	
+
 	public void clickUserIconBtn() {
-		userIconBtn.click();
+
+		wait.until(ExpectedConditions.elementToBeClickable(userIconBtn)).click();
 	}
-	
-	public WebElement clickCreateNewAccountLink() {
-		return createNewAccountLink;
+
+	public void clickCreateNewAccountLink() {
+
+		wait.until(ExpectedConditions.elementToBeClickable(createNewAccountLink));
+		createNewAccountLink.click(); 
 	}
 
 	public void enterUserName(String user) {
-		 userName.sendKeys(user);;
+		wait.until(ExpectedConditions.visibilityOf(userName)).sendKeys(user);
 	}
 
 	public void enterEmail(String id) {
-		email.sendKeys(id);
+		wait.until(ExpectedConditions.visibilityOf(email)).sendKeys(id);
 	}
 
 	public void enterPass(String pwd) {
-		pass.sendKeys(pwd);
+		wait.until(ExpectedConditions.visibilityOf(pass)).sendKeys(pwd);
 	}
 
 	public void enterConfirmPass(String conpwd) {
-		confirmPass.sendKeys(conpwd);
+		wait.until(ExpectedConditions.visibilityOf(confirmPass)).sendKeys(conpwd);
 	}
 
 	public void enterFName(String fname) {
-		fName.sendKeys(fname);
+		wait.until(ExpectedConditions.visibilityOf(fName)).sendKeys(fname);
 	}
 
 	public void enterLName(String lname) {
-		lName.sendKeys(lname);
+		wait.until(ExpectedConditions.visibilityOf(lName)).sendKeys(lname);
 	}
 
 	public void enterPhone(String ph) {
-		phone.sendKeys(ph);
+		wait.until(ExpectedConditions.visibilityOf(phone)).sendKeys(ph);
 	}
 
 	public void enterCountry(String coun) {
-		country.click();
-		WebElement count = country;
-		Select sel = new Select(count);
+		wait.until(ExpectedConditions.elementToBeClickable(country)).click();
+		Select sel = new Select(country);
 		sel.selectByVisibleText(coun);
-
 	}
 
 	public void enterCity(String cty) {
-		city.sendKeys(cty);
+		wait.until(ExpectedConditions.visibilityOf(city)).sendKeys(cty);
 	}
 
 	public void enterAddress(String add) {
-		address.sendKeys(add);
+		wait.until(ExpectedConditions.visibilityOf(address)).sendKeys(add);
 	}
 
 	public void enterState(String ste) {
-		state.sendKeys(ste);
+		wait.until(ExpectedConditions.visibilityOf(state)).sendKeys(ste);
 	}
 
 	public void enterPincode(String code) {
-		pincode.sendKeys(code);
+		wait.until(ExpectedConditions.visibilityOf(pincode)).sendKeys(code);
 	}
 
 	public void clickCheckbox() {
-		checkbox.click();
+		wait.until(ExpectedConditions.elementToBeClickable(checkbox)).click();
 	}
 
 	public void clickReg_Btn() {
-		regBtn.click();
+		wait.until(ExpectedConditions.elementToBeClickable(regBtn)).click();
 	}
-
 }
