@@ -60,12 +60,12 @@ public class CreateNewAccountPage extends Base {
 		userIconBtn.click();
 	}
 	
-	public void clickCreateNewAccountLink() {
-		createNewAccountLink.click();
+	public WebElement clickCreateNewAccountLink() {
+		return createNewAccountLink;
 	}
 
 	public void enterUserName(String user) {
-		userName.sendKeys(user);
+		 userName.sendKeys(user);;
 	}
 
 	public void enterEmail(String id) {
