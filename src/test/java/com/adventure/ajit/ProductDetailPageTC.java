@@ -12,7 +12,7 @@ import com.adventures.utilities.AdvantageExcelUtil;
 
 public class ProductDetailPageTC extends Base {
 	@Test(dataProvider = "SignData", dataProviderClass = AdvantageExcelUtil.class)
-	public void verifyNunberOfProduct(String id, String pass) throws InterruptedException {
+	public void verifySignIn_TC(String id, String pass) throws InterruptedException {
 		ProductDetailsPage Page = new ProductDetailsPage();
 		PageFactory.initElements(driver, Page);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
